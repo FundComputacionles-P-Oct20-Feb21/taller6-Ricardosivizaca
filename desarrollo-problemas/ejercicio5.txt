@@ -1,0 +1,51 @@
+Problema 5
+Una empresa de comercialización de computadoras realiza el proceso de venta haciendo un descuento por tipo de cliente: Si es cliente tipo 1 hay un descuento del 10% Si es cliente tipo 2 hay un descuento del 20% En caso que sea otro tipo de cliente, no hay descuento. Generar un proceso que permita ingresar 7 ventas: por cada venta preguntar los siguiente datos:
+
+Nombre del cliente
+Costo de la computadora (solo se vende una computadora por transacción)
+Tipo de cliente
+Presentar el siguiente reporte:
+
+Cliente tipo 1, compra computadora con precio $100 y el costo final a cancelar es $90
+
+
+
+1. Inicio
+
+2. nombreCliente, x(200)[{1-9},{a-z},{A-Z}, {/}]
+3. costoComputadora, d[0,n] 
+4. tipoCliente, x(200)[{1-9},{a-z},{A-Z}, {/}]
+5. cadenaFinal, x(200)[{1-9},{a-z},{A-Z}, {/}]
+6. contador, i[0,n] 
+7. descuento, i[0,n]
+8. costoFinal, i[0,n]
+
+9. contador <-- 1
+10. Mientras contador <= 7 entonces
+11. 	Escribir "Ingresar el nombre del cliente"
+12. 	Leer nombreCliente
+13. 	Escribir "Igrese el costo de la computadora"
+14. 	Leer costoCoputadora
+15. 	Escribir "Indique el tipo del cliente "
+16. 	Leer tipoCliente
+17. 		Si tipoCliente == "1" entonces
+18. 		 descuento <-- 10
+19. 		 descuento <-- descuento * costoComputadora /100 
+20.          costoFinal <-- costoComputadora - descuento
+21. 		 cadenaFinal <-- nombreCliente + " tipo " + tipoCliente + ",compra computadora con precio " + costoComputadora + " y el costo final a cancelar es " + costoFinal + "\n" 			
+
+22.			De lo contrario
+23. 		Si tipoCliente == "2" entonces 
+24. 			descuento <-- 20
+25. 			descuento <-- descuento * costoComputadora /100 
+26. 			cadenaFinal <-- nombreCliente + "tipo " + tipoCliente + ",compra computadora con precio " + costoComputadora + " y el costo final a cancelar es " + costoFinal + "\n" 
+27.                De lo contrario
+28.                   Si tipoCliente > "2"
+29.                       cadenaFinal <-- nombreCliente + "tipo " + tipoCliente + ",compra computadora con precio " + costoComputadora + " y el costo final a cancelar es " + costoComputadora + "\n" 
+30.        Fin Si
+31.       Fin Si
+32.      Fin Si
+33.     contador <-- contador + 1
+34. 	Fin Mientras
+35. Escribir cadenaFinal 
+36. Fin

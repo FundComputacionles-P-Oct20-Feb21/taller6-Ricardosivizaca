@@ -1,0 +1,36 @@
+Problema 4
+Generar una miniespecificación que permita ingresar 4 estudiantes; por cada uno de ellos ingresar el nombre del estudiante, el promedio de ciclo. Presentar el siguiente reporte
+
+Estudiante 1	10	Aprobado
+Estudiante 2	6.9	Reprobado
+Estudiante 3	7	Aprobado
+Estudiante 4	5	Reprobado
+
+Atención; con base al valor del promedio, usted debe asignar en cada registro el tipo Aprobado o Reprobado.
+
+1.Inicio
+
+2. nombresEstudiantes, x(200)[{1-9},{a-z},{A-Z}, {/}]
+3. contador, i[0,n] <-- 1
+4. promedioCiclo, d[0,n] 
+5. cadenaFinal, x(200)[{1-9},{a-z},{A-Z}, {/}]
+6. resultadoFinal, x(200)[{1-9},{a-z},{A-Z}, {/}] 
+
+7. Mientras contador <=4 entonces
+8.   Escribir "Ingrese su nombre"
+9.   Leer nombresEstudiantes
+10.  Escribir "Ingrese promedio del cliclo"
+11.  Leer promedioCiclo
+
+12.     Si promedioCiclo >= 7 entonces 
+13.     resultadoFinal <-- "Aprobado" 
+14.     cadenaFinal <-- nombresEstudiantes + "\t" + promedioCiclo + "\t" + resultadoFinal + "\n"
+15.     De lo contraio 
+16.     Si poredioCiclo < 7 entonces
+17.     resultadoFinal <-- "Reprobado"
+18.     cadenaFinal <-- nombresEstudiantes + "\t" + promedioCiclo + "\t" + resultadoFinal + "\n"
+19.  Fin Si 
+20. contador <-- contador + 1
+21. Fin Mientras 
+22. Escribir cadenaFinal 
+23. Fin
